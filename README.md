@@ -1,0 +1,2 @@
+# Choise_Lesson_System_Finally_Demo
+这是一个完全版（雾）可存入本地的学生选课系统
