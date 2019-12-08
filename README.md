@@ -4,7 +4,7 @@
 
 
 
-#### 本选课系统可以实现的主要功能：  
+### 本选课系统可以实现的主要功能：  
 1.学生登录，学生注册  
 2.学生选课  
 3.学生退课  
@@ -27,7 +27,7 @@
 
 ##### 1.登录界面  
 
-![登录界面](https://github.com/liyuanyao27/xuankezongheshiyan/blob/master/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20191208095752.png?raw=true)  
+![登录界面](https://github.com/liyuanyao27/Choise_Lesson_System_Finally_Demo/blob/master/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20191208213636.png?raw=true)  
 
 
 登陆界面内有两个文本输入框，三个按钮，运用了监听器，当按下登录后可以读取已注册的账户，判断密码和账号是否匹配。注册账号即用此用户名和密码进行注册。  
@@ -51,8 +51,8 @@
 		if(tf2.getText().equals("Admin")&&ps.getText().equals("Admin")){
 			AddCourse print=new AddCourse();}}
 ```
-上面的程序是我的登录按钮监听器，当点击登录按钮后会与***Admin***文件中已保存的用户名和密码进行比较。若有相同的则转到下一个界面，既主界面  
-
+上面的程序是我的登录按钮监听器，当点击登录按钮后会与 ***user*** 文件中已保存的用户名和密码进行比较。若有相同的则转到下一个界面，既主界面  
+![Admin](https://github.com/liyuanyao27/Choise_Lesson_System_Finally_Demo/blob/master/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20191208212259.png?raw=true)  
 
 `Frame_index choice=new Frame_index();`  
 在这里我还设定了一个管理员用户和密码为都***Admin***，当满足此条件时，我们可以对课程进行新加。  
@@ -62,19 +62,19 @@
 
 当成功时会出现以下界面：  
 
+![登录成功](https://github.com/liyuanyao27/Choise_Lesson_System_Finally_Demo/blob/master/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20191208212818.png?raw=true "登陆成功")  
 
 
 注册很简单，只要写入文件即可。  
 
 
-![登录成功](https://github.com/liyuanyao27/xuankezongheshiyan/blob/master/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20191208095902.png?raw=true "登陆成功")  
 
 
 
 ##### 2.主界面
-主界面的设计很简单，运用绝对位置把四个按钮分为东南东北西北西南四个位置，在位置上放上按钮。  
+主界面的设计很简单，运用绝对位置把三个个按钮分为固定在主界面上。  
 ![系统主页面](https://github.com/liyuanyao27/xuankezongheshiyan/blob/master/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20191208095922.png?raw=true)  
-这部分编程比较简单只需要创界页面，在页面添加按钮，给四个按钮添加上监听器即可。举其中一例  
+这部分编程比较简单只需要创界页面，在页面添加按钮，给三个按钮添加上监听器即可。举其中一例  
 ```		JButton btn1=new JButton("学生选课");
 		btn1.setBounds(36, 56, 138, 88);
 		btn1.addActionListener(new ActionListener(){
@@ -88,7 +88,7 @@
 
 
 ##### 3.选课界面  
-![选课页面](https://github.com/liyuanyao27/xuankezongheshiyan/blob/master/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20191208095952.png?raw=true)  
+![选课页面](https://github.com/liyuanyao27/Choise_Lesson_System_Finally_Demo/blob/master/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20191208212844.png?raw=true)  
 选课界面由两部分构成，一个是JList另外是按钮部分，按钮部分包含两个按钮一个是确认选课按钮，另一个是退出界面的按钮。  
 这部分的窗体建立都很简单，比较难的是如何进行参数传递，即怎么将我选的课程加入Student中的属性Course中，后来在同学的启发下我有了一个新的想法。要不就不传参数了，直接将我选的科目保存在文件里，然后需要的时候直接读取，非常方便。
 ```		btn1.addActionListener(new ActionListener(){
@@ -151,7 +151,7 @@
 
 ##### 6.添加课程界面  
 在文章开头时只能用管理员账号密码登入才会有显示的界面。  
-![添加课程](https://github.com/liyuanyao27/xuankezongheshiyan/blob/master/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20191208101244.png?raw=true)  
+![添加课程](https://github.com/liyuanyao27/Choise_Lesson_System_Finally_Demo/blob/master/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20191208214131.png?raw=true)  
 图片如上，非常简单，加入TextArea即可，按钮有两个，一个确认添加，一个退出界面。限制输入我认为用异常处理过于麻烦，判断异常后抛出异常，再catch异常，不如直接用if语句限制输入，简洁方便。
 ```
 btn1.addActionListener(new ActionListener(){
